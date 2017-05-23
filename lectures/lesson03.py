@@ -24,6 +24,13 @@ else:
 uid = uid if uid is not None else 1
 print(1) if a < b else print(2)
 
+l=[1, 2, 3, 4, 5]
+m=l
+l.append(6)
+m = l if type(l) is list and len(l) == 5 else [i for i in range(l[0],l[-1])] #это просто чума)
+
+
+
 # циклы
 # цикл while
 print()
@@ -42,7 +49,7 @@ while i < 10: #условие цикла
 i=0
 while True: #бесконечный цикл
     if i > 10:
-        break # break - выход из цикла
+        break #break - выход из цикла
     i += 1
 
 
@@ -119,7 +126,7 @@ print()
 #list.index(a) - получение индекса первого вхождения a
 #del a - удаляет переменную а
 lst1 = [1, 2, 3, 4]
-lst2 = lst1
+lst2 = lst1 #обе переменные теперь ссылаются на один объект в памяти
 lst2.append(5)
 print(lst1)
 print(lst2)
